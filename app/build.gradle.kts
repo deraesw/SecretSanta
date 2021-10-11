@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -65,8 +67,17 @@ dependencies {
     //Lifecycle
     implementation(ArchitectureComponent.Lifecycle.RUNTIME)
 
+    //Hilt
+    implementation(ArchitectureComponent.Hilt.HILT_ANDROID)
+    kapt(ArchitectureComponent.Hilt.HILT_COMPILER)
+
     //Test
     testImplementation(Test.JUNIT)
     androidTestImplementation(Test.JUNIT_EXT)
     androidTestImplementation(Test.ESPRESSO_CORE)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

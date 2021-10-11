@@ -27,6 +27,13 @@ object ArchitectureComponent {
         const val ACTIVITY_COMPOSE = "androidx.activity:activity-compose:1.3.0-alpha06"
     }
 
+    object Hilt {
+        const val VERSION = "2.38.1"
+
+        const val HILT_ANDROID = "com.google.dagger:hilt-android:$VERSION"
+        const val HILT_COMPILER = "com.google.dagger:hilt-compiler:$VERSION"
+    }
+
     object Lifecycle {
         const val RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
         const val EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0"
